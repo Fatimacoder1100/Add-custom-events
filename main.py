@@ -20,7 +20,7 @@ class Sprite(pygame.sprite.Sprite):
     def __init__(self, color, height, width):
         super().__init__()
         self.image = pygame.Surface([width, height])
-        self.image.fill(pygame.Color('dodgerblue')) #color for sprite
+        self.image.fill(pygame.Color('green')) #color for sprite
         pygame.draw.rect(self.image, color, pygame.Rect(0, 0, width, height))
         self.rect = self.image.get_rect()
 
@@ -36,14 +36,14 @@ pygame.display.set_caption("Sprite Collision")
 all_sprites = pygame.sprite.Group()
 
 #create sprites
-sprite1 = Sprite(pygame.Color('black'), 20, 30)
+sprite1 = Sprite(pygame.Color('pink'), 20, 30)
 sprite1.rect.x, sprite1.rect.y = random.randint(
     0, SCREEN_WIDTH - sprite1.rect.width), random.randint(
         0, SCREEN_HEIGHT - sprite1.rect.height)
 all_sprites.add(sprite1)
 
 
-sprite2 = Sprite(pygame.Color('red'), 20, 30)
+sprite2 = Sprite(pygame.Color('green'), 20, 30)
 sprite2.rect.x, sprite2.rect.y = random.randint(
     0, SCREEN_WIDTH - sprite2.rect.width), random.randint(
         0, SCREEN_HEIGHT - sprite2.rect.height)
